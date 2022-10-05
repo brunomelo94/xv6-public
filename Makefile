@@ -31,6 +31,8 @@ OBJS = \
 # Cross-compiling (e.g., on Mac OS X)
 # TOOLPREFIX = i386-jos-elf
 
+# teste Clarice
+
 # Using native tools (e.g., on X86 Linux)
 #TOOLPREFIX = 
 
