@@ -31,8 +31,6 @@ OBJS = \
 # Cross-compiling (e.g., on Mac OS X)
 # TOOLPREFIX = i386-jos-elf
 
-# teste Clarice
-
 # Using native tools (e.g., on X86 Linux)
 #TOOLPREFIX = 
 
@@ -183,6 +181,7 @@ UPROGS=\
 	_usertests\
 	_wc\
 	_zombie\
+	_testSysCall\
 
 fs.img: mkfs README $(UPROGS)
 	./mkfs fs.img README $(UPROGS)
@@ -253,6 +252,7 @@ EXTRA=\
 	mkfs.c ulib.c user.h cat.c echo.c forktest.c grep.c kill.c\
 	ln.c ls.c mkdir.c rm.c stressfs.c usertests.c wc.c zombie.c\
 	printf.c umalloc.c\
+	testSysCall.c\
 	README dot-bochsrc *.pl toc.* runoff runoff1 runoff.list\
 	.gdbinit.tmpl gdbutil\
 
@@ -276,7 +276,6 @@ dist-test:
 	cd dist-test; $(MAKE) print
 	cd dist-test; $(MAKE) bochs || true
 	cd dist-test; $(MAKE) qemu
-	
 
 # update this rule (change rev#) when it is time to
 # make a new revision.
