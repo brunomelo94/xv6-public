@@ -377,6 +377,10 @@ sched(void)
   if(readeflags()&FL_IF)
     panic("sched interruptible");
   intena = mycpu()->intena;
+
+  //Counts context switch
+  p->contextSwitchCount++;
+  
   swtch(&p->context, mycpu()->scheduler);
   mycpu()->intena = intena;
 }

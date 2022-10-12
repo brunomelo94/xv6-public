@@ -62,6 +62,7 @@ struct proc
   char name[16];              // Process name (debugging)
   int syscalltrace;           // syscalltrace
   int syscallcount;           // syscallcount
+  int contextSwitchCount;     // Counts context switches that happens in sched
 };
 
 // Process memory is laid out contiguously, low addresses first:

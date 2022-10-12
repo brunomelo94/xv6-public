@@ -15,6 +15,14 @@ int main(void)
 
     trace(1);
 
+    int cs1, cs2, cs3, cs4;
+    cs1 = cs();
+    cs2 = cs();
+    sleep(1, 5);
+    cs3 = cs();
+    sleep(1, 5);
+    cs4 = cs();
+
     sleep(1, 5);
 
     exit();

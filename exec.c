@@ -102,10 +102,12 @@ int exec(char *path, char **argv)
   curproc->tf->eip = elf.entry; // main
   curproc->tf->esp = sp;
 
-  // Set current process's syscalltrace to 0
+  // Sets current process's syscalltrace to 0
   curproc->syscalltrace = 0;
-  // Set current process's syscallcount to 0
+  // Sets current process's syscallcount to 0
   curproc->syscallcount = 0;
+  // Sets context switch counter to 0
+  curproc->contextSwitchCount = 0;
 
   switchuvm(curproc);
   freevm(oldpgdir);

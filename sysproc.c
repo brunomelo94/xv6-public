@@ -34,6 +34,15 @@ int sys_trace(void)
   return curproc->syscallcount;
 }
 
+int sys_cs(void)
+{
+  struct proc *curproc = myproc();
+
+  cprintf("\n To no sysproc.c: %d \n \n", curproc->contextSwitchCount);
+
+  return curproc->contextSwitchCount;
+}
+
 int sys_fork(void)
 {
   return fork();
