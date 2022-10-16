@@ -38,8 +38,6 @@ int sys_cs(void)
 {
   struct proc *curproc = myproc();
 
-  cprintf("\n To no sysproc.c: %d \n \n", curproc->contextSwitchCount);
-
   return curproc->contextSwitchCount;
 }
 
